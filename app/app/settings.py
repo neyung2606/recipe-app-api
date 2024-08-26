@@ -46,7 +46,9 @@ INSTALLED_APPS = [
     "core",
     "rest_framework",
     "drf_spectacular",
+    "rest_framework_simplejwt",
     "user",
+    "authentication",
 ]
 
 MIDDLEWARE = [
@@ -140,4 +142,7 @@ AUTH_USER_MODEL = "core.User"
 
 REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ),
 }
