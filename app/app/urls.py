@@ -32,4 +32,5 @@ urlpatterns = [
     ),
     path("api/user/", include("user.urls")),
     path("api/auth/", include("authentication.urls")),
+    path("api/post/", include("posts.urls")),
 ]
